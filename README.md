@@ -1,9 +1,12 @@
 # DeleteSavedItemsFacebook
 
+// JavaScript code for console
+
 // Returns a Promise that resolves after "ms" Milliseconds
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
 async function load1 () { // We need to wrap the loop into an async function for this to work
+  // Change Más to More for English
   var links = Array.from(document.querySelector('[role=main]').querySelectorAll('[aria-label="Más"]')).slice(1)
 
   for (var i = 0; i < links.length; i++) {
@@ -29,7 +32,7 @@ async function load2 () { // We need to wrap the loop into an async function for
 while(true){
   await load1();
   await load2();
-  await timer(100); // then the created Promise can be awaited
+  await timer(300); // then the created Promise can be awaited
 }
  
 
